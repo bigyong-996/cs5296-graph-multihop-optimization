@@ -1,0 +1,4 @@
+backend,dataset,query_type,p50_latency_ms,p95_latency_ms,p99_latency_ms,avg_result_size,success_rate
+postgres,twitter_top10000,common_neighbors,74.68,79.14,91.636,20.28,1.0
+postgres,twitter_top10000,neighbors,57.685,66.315,84.737,3227.866666666667,1.0
+postgres,twitter_top10000,shortest_path,0.20600000000000002,0.281,0.304,1.92,1.0

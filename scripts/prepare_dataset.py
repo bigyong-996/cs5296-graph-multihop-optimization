@@ -4,7 +4,7 @@ import argparse
 from pathlib import Path
 
 from graph_bench.canonical import read_edge_list, top_degree_subgraph, write_canonical_dataset
-from graph_bench.closure import build_bounded_closure
+from graph_bench.closure import write_bounded_closure_csv
 
 
 def main() -> None:
@@ -31,11 +31,7 @@ def main() -> None:
 
     output_dir = Path(args.output_dir)
     write_canonical_dataset(dataset, output_dir)
-    closure_rows = build_bounded_closure(dataset, max_depth=3)
-    with (output_dir / "closure_3.csv").open("w", encoding="utf-8") as handle:
-        handle.write("src,dst,depth\n")
-        for src, dst, depth in sorted(closure_rows):
-            handle.write(f"{src},{dst},{depth}\n")
+    write_bounded_closure_csv(dataset, max_depth=3, output_path=output_dir / "closure_3.csv")
 
 
 if __name__ == "__main__":

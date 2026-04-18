@@ -13,6 +13,7 @@ def aggregate_jsonl(input_path: Path) -> pd.DataFrame:
         .agg(
             p50_latency_ms=("latency_ms", "median"),
             p95_latency_ms=("latency_ms", lambda series: round(series.quantile(0.95), 3)),
+            p99_latency_ms=("latency_ms", lambda series: round(series.quantile(0.99), 3)),
             avg_result_size=("result_size", "mean"),
             success_rate=("success", "mean"),
         )

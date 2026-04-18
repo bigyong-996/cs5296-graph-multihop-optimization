@@ -15,3 +15,6 @@ node_modules/
 .vscode/
 *.swp
 *.swo
+datasets/raw/twitter_combined.txt
+datasets/raw/twitter_combined.txt.gz
+datasets/derived/twitter_top10000/

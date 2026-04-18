@@ -1,4 +1,4 @@
-backend,dataset,query_type,p50_latency_ms,p95_latency_ms,avg_result_size,success_rate
-neo4j,facebook_full,common_neighbors,0.513,0.999,1.8,1.0
-neo4j,facebook_full,neighbors,2.059,17.063,855.52,1.0
-neo4j,facebook_full,shortest_path,0.55,0.929,1.96,1.0
+backend,dataset,query_type,p50_latency_ms,p95_latency_ms,p99_latency_ms,avg_result_size,success_rate
+neo4j,facebook_full,common_neighbors,0.513,0.999,1.231,1.8,1.0
+neo4j,facebook_full,neighbors,2.059,17.063,20.191,855.52,1.0
+neo4j,facebook_full,shortest_path,0.55,0.929,1.061,1.96,1.0

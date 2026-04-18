@@ -63,6 +63,15 @@ docs/superpowers/        # 设计文档与 implementation plan
 
 ---
 
+## 当前实验状态
+
+- `facebook_full` 已完成 `Neo4j + PostgreSQL` 正式 benchmark
+- `twitter_top10000` 已完成 `Neo4j + PostgreSQL` 正式 benchmark
+- `JanusGraph` 保留 tiny benchmark 和增强验证路径，但不进入主对比矩阵
+- 结构化结论、可写入报告的 claim 和 caveat 见 [docs/experiment_notes.md](/Users/qingynag/development/projects/study/cs5296-graph-multihop-optimization/docs/experiment_notes.md)
+
+---
+
 ## Quickstart
 
 1. `python3 -m venv .venv && source .venv/bin/activate`
@@ -77,6 +86,22 @@ docs/superpowers/        # 设计文档与 implementation plan
 
 ---
 
+## 主实验结果入口
+
+主实验结果固定为两条：
+
+- `facebook_full` on `Neo4j + PostgreSQL`
+- `twitter_top10000` on `Neo4j + PostgreSQL`
+
+对应产物：
+
+- [results/summary/facebook-full-comparison.csv](/Users/qingynag/development/projects/study/cs5296-graph-multihop-optimization/results/summary/facebook-full-comparison.csv)
+- [results/summary/facebook-full-p50-latency.png](/Users/qingynag/development/projects/study/cs5296-graph-multihop-optimization/results/summary/facebook-full-p50-latency.png)
+- [results/summary/twitter-top10000-comparison.csv](/Users/qingynag/development/projects/study/cs5296-graph-multihop-optimization/results/summary/twitter-top10000-comparison.csv)
+- [results/summary/twitter-top10000-p50-latency.png](/Users/qingynag/development/projects/study/cs5296-graph-multihop-optimization/results/summary/twitter-top10000-p50-latency.png)
+
+---
+
 ## 文档索引
 
 | 文档 | 说明 |
@@ -84,6 +109,7 @@ docs/superpowers/        # 设计文档与 implementation plan
 | [行动指南（中文）](docs/docx/markdown/action_guide_cn.md) | 阶段任务、交付物、预算与风险 |
 | [小组 Proposal（Markdown）](docs/docx/markdown/group15_proposal.md) | 小组选题与方案摘要 |
 | [本地运行手册](docs/runbook.md) | 本地开发、导入与 benchmark 命令 |
+| [实验说明笔记](docs/experiment_notes.md) | 数据规模、结果结论、报告可用 claim 与 caveat |
 | [Artifact Appendix 草稿](docs/artifact_appendix.md) | 复现实验与仓库入口说明 |
 | [Demo Script](docs/demo_script.md) | Demo 视频讲解提纲 |
 

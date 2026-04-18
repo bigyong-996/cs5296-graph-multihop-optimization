@@ -1,172 +1,123 @@
-# 项目当前状态与下一步实验计划
+# 项目当前状态与下一步收尾建议
 
 日期：2026-04-18
 
-## 1. 当前进度判断
+## 1. 当前完成度判断
 
-当前项目已经不再是“只有文档”或“只有骨架”的状态，而是进入了：
+当前项目已经从“实验底座完成”推进到了“主实验矩阵已完成”的阶段。
 
-- 实验底座已完成
-- 小样本 smoke test 已完成
-- 第一轮真实 `SNAP Facebook` 正式实验已完成
-- `Twitter` 扩展实验、`JanusGraph` 正式对比、报告整合还未完成
+现在的准确状态是：
 
-也就是说，现在仓库已经具备“能跑真实实验并产出第一版结果”的能力，而不只是一个 scaffold。
+- `facebook_full` 主实验已完成
+- `twitter_top10000` 主实验已完成
+- `JanusGraph` 保留为增强项，不进入主对比矩阵
+- 报告正文、最终 demo 讲稿、最终 artifact 整理还没完全写完
 
-## 2. 已完成内容
+所以当前项目已经不是“只有骨架”，而是已经具备了两组真正可以写进报告的正式结果。
 
-目前已经完成的部分如下：
+## 2. 已完成的核心内容
 
-- 代码与脚本
-  - `graph_bench` Python 包已建立
-  - 数据准备、数据导入、benchmark、聚合、绘图、smoke test、partitioning 脚本都已可用
-- 本地数据库环境
-  - `Neo4j`
-  - `PostgreSQL`
-  - `JanusGraph`
-  - `Cassandra`
-- 小样本验证
-  - `facebook_tiny` 已跑通 `Neo4j / PostgreSQL / JanusGraph`
-  - tiny benchmark 结果已写入 `results/raw/` 和 `results/summary/`
-- 真实数据准备
-  - 已下载 `SNAP Facebook` 原始数据：
-    - `datasets/raw/facebook_combined.txt.gz`
-    - `datasets/raw/facebook_combined.txt`
-  - 已生成 canonical 数据目录：
-    - `datasets/derived/facebook_full/`
-- 第一轮正式 benchmark
-  - 已完成 `facebook_full` 在 `Neo4j` 与 `PostgreSQL` 上的导入
-  - 已完成正式 workload 生成：
-    - `benchmarks/facebook_full.json`
-  - 已完成正式 benchmark 原始结果：
-    - `results/raw/neo4j-facebook-full.jsonl`
-    - `results/raw/postgres-facebook-full.jsonl`
-  - 已完成结果聚合与图表：
-    - `results/summary/neo4j-facebook-full.csv`
-    - `results/summary/postgres-facebook-full.csv`
-    - `results/summary/facebook-full-comparison.csv`
-    - `results/summary/facebook-full-p50-latency.png`
+### 工程与脚本
 
-## 3. 当前数据规模
+- `graph_bench` 包已具备数据准备、backend adapter、benchmark、聚合、绘图和 smoke test
+- `Neo4j / PostgreSQL / JanusGraph / Cassandra` 本地容器链路已建立
+- `smoke_test_core_backends.py` 和 `smoke_test_janusgraph.py` 已支持参数化节点输入
+- `aggregate_results.py` 已补充 `p99_latency_ms`
 
-这次正式实验使用的是 `SNAP Facebook Combined` 数据，转换后得到：
+### 正式数据集
 
-- 节点数：`4039`
-- 边数：`176468`
-- `closure_3.csv` 行数：约 `6874455`
+- `facebook_full`
+  - 原始数据已下载
+  - canonical 数据已生成
+  - 正式 workload 已生成
+  - `Neo4j + PostgreSQL` benchmark 已完成
+- `twitter_top10000`
+  - 原始 `twitter_combined` 已下载
+  - `top10000` canonical 数据已生成
+  - 真实 workload 已重生成
+  - `Neo4j + PostgreSQL` benchmark 已完成
 
-说明：
+### 结果文件
 
-- `edges.csv` 是对原图做了对称化后的有向边表示
-- `closure_3.csv` 是预计算的 3-hop 可达闭包，主要服务于 `PostgreSQL` 查询
+已落地的主结果包括：
 
-## 4. 第一轮正式实验结果
+- `results/summary/facebook-full-comparison.csv`
+- `results/summary/facebook-full-p50-latency.png`
+- `results/summary/twitter-top10000-comparison.csv`
+- `results/summary/twitter-top10000-p50-latency.png`
+- `docs/experiment_notes.md`
 
-当前已得到的聚合结果如下。
+## 3. 当前正式实验结论
 
-### Neo4j
+### Facebook
 
-- `common_neighbors`
-  - `p50 = 0.513 ms`
-  - `p95 = 0.999 ms`
-- `neighbors`
-  - `p50 = 2.059 ms`
-  - `p95 = 17.063 ms`
-- `shortest_path`
-  - `p50 = 0.550 ms`
-  - `p95 = 0.929 ms`
+在 `facebook_full` 上：
 
-### PostgreSQL
+- `PostgreSQL` 明显快于 `Neo4j`
+- 尤其是 `neighbors` 查询差距更明显
+- `shortest_path` 也仍然是 `PostgreSQL` 更快
 
-- `common_neighbors`
-  - `p50 = 0.332 ms`
-  - `p95 = 0.744 ms`
-- `neighbors`
-  - `p50 = 0.295 ms`
-  - `p95 = 0.416 ms`
-- `shortest_path`
-  - `p50 = 0.174 ms`
-  - `p95 = 0.306 ms`
+### Twitter
 
-### 初步结论
+在 `twitter_top10000` 上：
 
-- 在当前实现下，`PostgreSQL` 明显快于 `Neo4j`
-- 差距最大的查询类型是 `neighbors`
-- `common_neighbors` 和 `shortest_path` 两边都很快，但 `PostgreSQL` 仍然更低延迟
+- `Neo4j` 在 `neighbors` 和 `common_neighbors` 上明显反超 `PostgreSQL`
+- `PostgreSQL` 在 `shortest_path` 上仍然最快
 
-## 5. 结果解释时必须说明的 caveat
+也就是说，当前项目已经不是只有一组结论，而是已经出现了“不同数据规模/结构下，优势后端会发生变化”的研究结果，这一点对报告非常有价值。
 
-这轮结果可以写进阶段汇报，但在正式报告里必须解释下面这一点：
+## 4. 结果解释时必须写明的 caveat
 
-- `PostgreSQL` 查询当前依赖 `closure_3` 预计算表
-- `Neo4j` 查询当前是在图上做在线多跳展开
+报告里一定要明确写：
 
-因此，这一轮对比更准确地说是在比较：
+- 当前 `PostgreSQL` 路线使用的是 `closure_3` 预计算表
+- 当前 `Neo4j` 路线使用的是在线多跳遍历
 
-- `关系数据库 + 预计算闭包`
-- `图数据库 + 在线遍历`
+所以这不是纯粹的“数据库引擎对引擎”对比，而是：
 
-而不是一个完全 apples-to-apples 的纯引擎基准。  
-这并不影响本轮结果有效，但在报告中要写清楚，否则容易被老师问。
+- `PostgreSQL + closure_3`
+- versus `Neo4j` online traversal
 
-## 6. 本轮推进中已经解决的关键技术问题
+这个 caveat 已经整理进 [experiment_notes.md](/Users/qingynag/development/projects/study/cs5296-graph-multihop-optimization/docs/experiment_notes.md)。
 
-在这轮真实实验里，已经修掉了几个会卡住项目的点：
+## 5. JanusGraph 当前定位
 
-- `PostgreSQL` 导入优化
-  - 原始逐行插入在 `facebook_full` 上太慢
-  - 现在改成了 `COPY` 批量导入
-- `Neo4j` 多跳查询优化
-  - 原来的 `*1..3` 可变长度路径在真实图上会非常慢
-  - 现在改成了更稳定的分层展开写法
-- `JanusGraph` 本地资源控制
-  - 已将默认过大的 JVM heap 调低到适合本地开发的级别
+JanusGraph 现在的正确定位是：
 
-## 7. 现在还没完成什么
+- 保留 tiny benchmark 和增强验证路径
+- 已完成 `facebook_full` 的 full-data smoke validation
+- 不进入主对比矩阵
 
-虽然已经不是“只有骨架”，但距离作业完整交付还差几块关键内容：
+原因不是“完全跑不通”，而是：
 
-- 还没有跑 `Twitter` 的正式实验
-- 还没有决定 `JanusGraph` 是做“最小验证”还是“补正式 benchmark”
-- 还没有把当前结果整理成课程报告正文
-- 还没有制作最终展示材料和讲解逻辑
+- full benchmark 路径出现了不稳定因素
+- 清理和重导过程存在 Gremlin timeout
+- 继续强行把它塞进主实验矩阵，收益不如继续完成报告与交付
 
-## 8. 接下来最合理的顺序
+所以当前最合理的写法是：
 
-当前建议的下一步不是继续改底座，而是继续推进实验与交付：
+- 主矩阵：`facebook_full + twitter_top10000` on `Neo4j + PostgreSQL`
+- 次要增强：`JanusGraph` tiny path + `facebook_full` full-data smoke validation
 
-1. 基于这轮 `facebook_full` 结果，先写第一版报告结论草稿
-2. 决定 `Twitter` 要不要作为第二个正式数据集
-3. 决定 `JanusGraph` 是只保留 smoke validation，还是补一轮正式 benchmark
-4. 补报告中的方法、实验设置、结果分析、局限性
-5. 最后整理 demo 和 artifact 说明
+## 6. 现在还缺什么
 
-## 9. 当前最稳妥的任务拆分建议
+离最终交付最近的缺口主要不在代码，而在材料整理：
 
-如果三个人并行推进，当前阶段比较稳的拆分方式是：
+- 把 `docs/experiment_notes.md` 写进最终报告正文
+- 把现有图表嵌入报告并补文字解释
+- 整理 Artifact Appendix 最终版本
+- 录制或准备 Demo 视频
 
-- 一个人负责报告正文
-  - 背景
-  - 方法
-  - 实验设置
-  - 当前 `facebook_full` 结果整理
-- 一个人负责扩展实验
-  - `Twitter`
-  - workload 调整
-  - 更多图表
-- 一个人负责系统与 artifact
-  - `JanusGraph`
-  - runbook
-  - demo script
-  - artifact appendix
+## 7. 当前最推荐的收尾顺序
 
-## 10. 结论
+1. 以 `docs/experiment_notes.md` 为基础写报告实验部分
+2. 把 `facebook_full` 和 `twitter_top10000` 两张图放进报告
+3. 在报告中明确写出 `PostgreSQL + closure_3` 的 caveat
+4. 将 JanusGraph 写成增强项，而不是主结论来源
+5. 按 `docs/demo_script.md` 整理最终 demo
 
-当前项目的准确状态是：
+## 8. 一句话结论
 
-- 已完成：实验平台、真实 Facebook 数据准备、第一轮正式 benchmark、第一版图表
-- 未完成：扩展数据集、完整对比矩阵、报告整合、最终演示
+当前项目的最好表述是：
 
-所以当前最重要的工作重点已经很清楚：
-
-从“搭系统”切换到“补实验结论与完成作业交付”。
+主实验已经完成，剩下的主要是把结果整理成“能交、能讲、能 defend”的最终材料。

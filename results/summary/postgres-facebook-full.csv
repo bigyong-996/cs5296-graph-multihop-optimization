@@ -1,4 +1,4 @@
-backend,dataset,query_type,p50_latency_ms,p95_latency_ms,avg_result_size,success_rate
-postgres,facebook_full,common_neighbors,0.332,0.744,1.8,1.0
-postgres,facebook_full,neighbors,0.295,0.416,855.52,1.0
-postgres,facebook_full,shortest_path,0.17400000000000002,0.306,1.96,1.0
+backend,dataset,query_type,p50_latency_ms,p95_latency_ms,p99_latency_ms,avg_result_size,success_rate
+postgres,facebook_full,common_neighbors,0.332,0.744,1.029,1.8,1.0
+postgres,facebook_full,neighbors,0.295,0.416,0.513,855.52,1.0
+postgres,facebook_full,shortest_path,0.17400000000000002,0.306,0.53,1.96,1.0

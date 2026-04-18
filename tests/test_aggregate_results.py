@@ -19,3 +19,5 @@ def test_aggregate_jsonl_produces_summary_table(tmp_path: Path) -> None:
 
     assert summary.loc[0, "backend"] == "neo4j"
     assert summary.loc[0, "p50_latency_ms"] == 2.0
+    assert summary.loc[0, "p95_latency_ms"] == 2.9
+    assert summary.loc[0, "p99_latency_ms"] == 2.98

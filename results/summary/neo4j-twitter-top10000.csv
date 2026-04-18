@@ -1,0 +1,4 @@
+backend,dataset,query_type,p50_latency_ms,p95_latency_ms,p99_latency_ms,avg_result_size,success_rate
+neo4j,twitter_top10000,common_neighbors,0.435,0.798,1.259,20.28,1.0
+neo4j,twitter_top10000,neighbors,2.556,88.687,120.082,3227.866666666667,1.0
+neo4j,twitter_top10000,shortest_path,0.44,0.76,1.038,1.92,1.0
