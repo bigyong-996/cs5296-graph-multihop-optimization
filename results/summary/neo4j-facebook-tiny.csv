@@ -1,0 +1,4 @@
+backend,dataset,query_type,p50_latency_ms,p95_latency_ms,avg_result_size,success_rate
+neo4j,facebook_tiny,common_neighbors,2.2415000000000003,4.404,0.5,1.0
+neo4j,facebook_tiny,neighbors,2.8215000000000003,5.333,2.8333333333333335,1.0
+neo4j,facebook_tiny,shortest_path,1.995,3.839,1.0,1.0

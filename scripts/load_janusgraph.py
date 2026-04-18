@@ -9,6 +9,12 @@ from gremlin_python.driver.client import Client
 from graph_bench.config import load_settings
 
 
+def _drain(response) -> None:
+    result = response.all()
+    if hasattr(result, "result"):
+        result.result()
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataset-dir", required=True)
@@ -16,22 +22,26 @@ def main() -> None:
 
     client = Client(load_settings().janusgraph_url, "g")
     dataset_dir = Path(args.dataset_dir)
-    client.submit("g.V().drop().iterate()").all()
+    _drain(client.submit("g.V().drop().iterate()"))
 
     with (dataset_dir / "nodes.csv").open(encoding="utf-8") as node_file:
         for row in csv.DictReader(node_file):
-            client.submit(
-                "g.addV('user').property('id', node_id).iterate()",
-                {"node_id": int(row["node_id"])},
-            ).all()
+            _drain(
+                client.submit(
+                    "g.addV('user').property('id', node_id).iterate()",
+                    {"node_id": int(row["node_id"])},
+                )
+            )
 
     with (dataset_dir / "edges.csv").open(encoding="utf-8") as edge_file:
         for row in csv.DictReader(edge_file):
-            client.submit(
-                "g.V().has('user','id',src).as('src').V().has('user','id',dst)"
-                ".addE('link').from('src').iterate()",
-                {"src": int(row["src"]), "dst": int(row["dst"])},
-            ).all()
+            _drain(
+                client.submit(
+                    "g.V().has('user','id',src).as('src').V().has('user','id',dst)"
+                    ".addE('link').from('src').iterate()",
+                    {"src": int(row["src"]), "dst": int(row["dst"])},
+                )
+            )
 
 
 if __name__ == "__main__":

@@ -1,12 +1,20 @@
 from graph_bench.adapters.janusgraph_adapter import JanusGraphAdapter
 
 
+class FakeFuture:
+    def __init__(self, value):
+        self._value = value
+
+    def result(self):
+        return [self._value]
+
+
 class FakeResponse:
     def __init__(self, value):
         self._value = value
 
     def all(self):
-        return [self._value]
+        return FakeFuture(self._value)
 
 
 class FakeClient:

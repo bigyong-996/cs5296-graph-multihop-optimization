@@ -6,7 +6,10 @@ class JanusGraphAdapter:
         self._client = client
 
     def _submit_scalar(self, query: str, bindings: dict[str, int]) -> int | None:
-        rows = self._client.submit(query, bindings=bindings).all()
+        response = self._client.submit(query, bindings=bindings)
+        rows = response.all()
+        if hasattr(rows, "result"):
+            rows = rows.result()
         if not rows:
             return None
         return rows[0]

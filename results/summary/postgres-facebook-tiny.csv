@@ -1,0 +1,4 @@
+backend,dataset,query_type,p50_latency_ms,p95_latency_ms,avg_result_size,success_rate
+postgres,facebook_tiny,common_neighbors,0.2395,0.357,0.5,1.0
+postgres,facebook_tiny,neighbors,0.20350000000000001,0.334,2.8333333333333335,1.0
+postgres,facebook_tiny,shortest_path,0.1905,0.307,1.0,1.0

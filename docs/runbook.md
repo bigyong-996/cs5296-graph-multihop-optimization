@@ -16,3 +16,10 @@
 3. Run `python3 scripts/run_benchmark.py --backend neo4j --dataset-name facebook_full --workload-file benchmarks/facebook.json --output results/raw/neo4j-facebook.jsonl`
 4. Run `python3 scripts/run_benchmark.py --backend postgres --dataset-name facebook_full --workload-file benchmarks/facebook.json --output results/raw/postgres-facebook.jsonl`
 5. Run `python3 scripts/aggregate_results.py --input results/raw/neo4j-facebook.jsonl --output results/summary/neo4j-facebook.csv`
+
+## JanusGraph path
+
+1. Start the JanusGraph profile with `docker compose -f infra/docker-compose.yml --profile janusgraph up -d cassandra janusgraph`
+2. The local Docker configuration intentionally caps JanusGraph and Cassandra heap sizes for laptop-friendly execution
+3. Run `python3 scripts/load_janusgraph.py --dataset-dir datasets/derived/facebook_tiny`
+4. Run `python3 scripts/smoke_test_janusgraph.py`

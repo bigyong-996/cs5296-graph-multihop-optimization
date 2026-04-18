@@ -1,0 +1,4 @@
+backend,dataset,query_type,p50_latency_ms,p95_latency_ms,avg_result_size,success_rate
+janusgraph,facebook_tiny,common_neighbors,11.4815,13.432,0.5,1.0
+janusgraph,facebook_tiny,neighbors,5.859500000000001,12.472,2.6666666666666665,1.0
+janusgraph,facebook_tiny,shortest_path,4.7509999999999994,5.781,1.0,1.0
