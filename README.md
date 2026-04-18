@@ -1,6 +1,6 @@
 # CS5296 · 云原生图数据库的大规模社交网络多跳查询优化
 
-本仓库为 **HKU CS5296 Cloud Computing** 小组研究项目代码与文档的协作空间。课程要求、评分与交付节奏以课程材料为准；**内部执行清单与阶段划分**见 [`docs/docx/markdown/action_guide_cn.md`](docs/docx/markdown/action_guide_cn.md)。
+本仓库为 **香港城市大学（CityU）CS5296 Cloud Computing** 小组研究项目代码与文档的协作空间。课程要求、评分与交付节奏以课程材料为准；**内部执行清单与阶段划分**见 [`docs/docx/markdown/action_guide_cn.md`](docs/docx/markdown/action_guide_cn.md)。
 
 **远程仓库**：[bigyong-996/cs5296-graph-multihop-optimization](https://github.com/bigyong-996/cs5296-graph-multihop-optimization)
 
