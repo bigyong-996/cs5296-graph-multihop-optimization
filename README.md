@@ -52,21 +52,28 @@
 ## 仓库结构（当前）
 
 ```text
-docs/docx/              # 课程 PDF、proposal 与参考材料
-docs/docx/markdown/ # 中英说明、小组 proposal、行动指南等
+src/graph_bench/         # 数据准备、adapter、benchmark 与 partitioning 代码
+scripts/                 # 数据导入、benchmark、聚合与 smoke scripts
+infra/                   # 本地 Docker Compose 环境
+datasets/derived/        # 小规模样例数据与导出格式
+docs/docx/               # 课程 PDF、proposal 与参考材料
+docs/docx/markdown/      # 中英说明、小组 proposal、行动指南等
+docs/superpowers/        # 设计文档与 implementation plan
 ```
-
-后续开发可在仓库根目录增加 `src/`、`scripts/`、`infra/` 等目录，并在本 README 中补充运行方式与环境变量说明。
 
 ---
 
-## 本地开发（占位）
+## Quickstart
 
-环境与依赖将随代码落地更新。一般流程预期为：
+1. `python3 -m venv .venv && source .venv/bin/activate`
+2. `python3 -m pip install -e ".[dev]"`
+3. `docker compose -f infra/docker-compose.yml up -d neo4j postgres`
+4. `python3 scripts/prepare_dataset.py --input tests/fixtures/raw/facebook_tiny.txt --dataset-name facebook_tiny --symmetrize --output-dir datasets/derived/facebook_tiny`
+5. `python3 scripts/load_neo4j.py --dataset-dir datasets/derived/facebook_tiny`
+6. `python3 scripts/load_postgres.py --dataset-dir datasets/derived/facebook_tiny`
+7. `python3 scripts/smoke_test_core_backends.py`
 
-1. 克隆本仓库并创建 Python/工具虚拟环境（若项目采用脚本与自动化测试）。  
-2. 按 `docs/docx/markdown/action_guide_cn.md` 中的阶段推进实验与记录。  
-3. 大规模实验前优先用小数据集验证，控制 AWS 费用。
+本仓库当前以本地优先的方式开发与验证，再按需要映射到云上实验环境。
 
 ---
 
@@ -76,6 +83,9 @@ docs/docx/markdown/ # 中英说明、小组 proposal、行动指南等
 |------|------|
 | [行动指南（中文）](docs/docx/markdown/action_guide_cn.md) | 阶段任务、交付物、预算与风险 |
 | [小组 Proposal（Markdown）](docs/docx/markdown/group15_proposal.md) | 小组选题与方案摘要 |
+| [本地运行手册](docs/runbook.md) | 本地开发、导入与 benchmark 命令 |
+| [Artifact Appendix 草稿](docs/artifact_appendix.md) | 复现实验与仓库入口说明 |
+| [Demo Script](docs/demo_script.md) | Demo 视频讲解提纲 |
 
 ---
 

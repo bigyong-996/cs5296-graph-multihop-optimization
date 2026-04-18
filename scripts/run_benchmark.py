@@ -4,9 +4,11 @@ import argparse
 import json
 from pathlib import Path
 
+from gremlin_python.driver.client import Client
 import psycopg
 from neo4j import GraphDatabase
 
+from graph_bench.adapters.janusgraph_adapter import JanusGraphAdapter
 from graph_bench.adapters.neo4j_adapter import Neo4jAdapter
 from graph_bench.adapters.postgres_adapter import PostgresAdapter
 from graph_bench.benchmark_runner import run_benchmark
@@ -21,7 +23,11 @@ def _load_workloads(path: Path) -> list[WorkloadCase]:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--backend", required=True, choices=["neo4j", "postgres"])
+    parser.add_argument(
+        "--backend",
+        required=True,
+        choices=["neo4j", "postgres", "janusgraph"],
+    )
     parser.add_argument("--dataset-name", required=True)
     parser.add_argument("--workload-file", required=True)
     parser.add_argument("--output", required=True)
@@ -38,8 +44,10 @@ def main() -> None:
             auth=(settings.neo4j_user, settings.neo4j_password),
         )
         backend = Neo4jAdapter(driver)
-    else:
+    elif args.backend == "postgres":
         backend = PostgresAdapter(psycopg.connect(settings.postgres_dsn))
+    else:
+        backend = JanusGraphAdapter(Client(settings.janusgraph_url, "g"))
 
     run_benchmark(
         backend_name=args.backend,

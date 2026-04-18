@@ -1,0 +1,72 @@
+[
+  {
+    "query_type": "neighbors",
+    "node_id": 2,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 3,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 2,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 4,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 3,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 1,
+    "right_id": 2,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 1,
+    "right_id": 2,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 3,
+    "right_id": 4,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 3,
+    "right_id": 4,
+    "hops": 3
+  }
+]
