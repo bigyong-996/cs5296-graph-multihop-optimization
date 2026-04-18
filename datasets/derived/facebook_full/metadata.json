@@ -1,0 +1,6 @@
+{
+  "dataset_name": "facebook_full",
+  "directed": false,
+  "node_count": 4039,
+  "edge_count": 176468
+}

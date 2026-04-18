@@ -37,9 +37,24 @@ def test_neighbor_count_uses_bounded_relationship_length() -> None:
     driver = FakeDriver([5])
     adapter = Neo4jAdapter(driver)
 
-    result = adapter.neighbor_count(node_id=1, hops=2)
+    result = adapter.neighbor_count(node_id=1, hops=1)
 
     assert result == 5
     query, params = driver.session_obj.calls[0]
-    assert "*1..2" in query
+    assert "[:LINK]->" in query
+    assert "*1.." not in query
+    assert params == {"node_id": 1}
+
+
+def test_neighbor_count_uses_layered_expansion_for_three_hops() -> None:
+    driver = FakeDriver([7])
+    adapter = Neo4jAdapter(driver)
+
+    result = adapter.neighbor_count(node_id=1, hops=3)
+
+    assert result == 7
+    query, params = driver.session_obj.calls[0]
+    assert "CALL {" in query
+    assert "hop3" in query
+    assert "*1..3" not in query
     assert params == {"node_id": 1}

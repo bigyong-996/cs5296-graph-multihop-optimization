@@ -1,0 +1,877 @@
+[
+  {
+    "query_type": "neighbors",
+    "node_id": 964,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 2955,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 624,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1066,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1117,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 54,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 2008,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1857,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 4028,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 3636,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 2674,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1969,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 2954,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1348,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1364,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1574,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1321,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1511,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 640,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 3999,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 2443,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 2605,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1384,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1847,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 2322,
+    "left_id": null,
+    "right_id": null,
+    "hops": 1
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 3024,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1251,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 911,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1013,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 440,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1835,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 2907,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 567,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1834,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 486,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 3744,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 757,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 689,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1526,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 369,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 966,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 3299,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1235,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 2560,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 282,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 2570,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 3669,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 2743,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 3622,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 993,
+    "left_id": null,
+    "right_id": null,
+    "hops": 2
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1556,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1060,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 3581,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 3803,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1079,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1461,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 2647,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 199,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 2723,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 3789,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 2101,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 3294,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 945,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 32,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 2913,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 2023,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1979,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 3745,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 2898,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1068,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 3105,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 3973,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 146,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1853,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "neighbors",
+    "node_id": 1141,
+    "left_id": null,
+    "right_id": null,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 0,
+    "right_id": 1,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 0,
+    "right_id": 1,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 2,
+    "right_id": 3,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 2,
+    "right_id": 3,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 4,
+    "right_id": 5,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 4,
+    "right_id": 5,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 6,
+    "right_id": 7,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 6,
+    "right_id": 7,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 8,
+    "right_id": 9,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 8,
+    "right_id": 9,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 10,
+    "right_id": 11,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 10,
+    "right_id": 11,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 12,
+    "right_id": 13,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 12,
+    "right_id": 13,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 14,
+    "right_id": 15,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 14,
+    "right_id": 15,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 16,
+    "right_id": 17,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 16,
+    "right_id": 17,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 18,
+    "right_id": 19,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 18,
+    "right_id": 19,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 20,
+    "right_id": 21,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 20,
+    "right_id": 21,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 22,
+    "right_id": 23,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 22,
+    "right_id": 23,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 24,
+    "right_id": 25,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 24,
+    "right_id": 25,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 26,
+    "right_id": 27,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 26,
+    "right_id": 27,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 28,
+    "right_id": 29,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 28,
+    "right_id": 29,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 30,
+    "right_id": 31,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 30,
+    "right_id": 31,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 32,
+    "right_id": 33,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 32,
+    "right_id": 33,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 34,
+    "right_id": 35,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 34,
+    "right_id": 35,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 36,
+    "right_id": 37,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 36,
+    "right_id": 37,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 38,
+    "right_id": 39,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 38,
+    "right_id": 39,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 40,
+    "right_id": 41,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 40,
+    "right_id": 41,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 42,
+    "right_id": 43,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 42,
+    "right_id": 43,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 44,
+    "right_id": 45,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 44,
+    "right_id": 45,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 46,
+    "right_id": 47,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 46,
+    "right_id": 47,
+    "hops": 3
+  },
+  {
+    "query_type": "common_neighbors",
+    "node_id": null,
+    "left_id": 48,
+    "right_id": 49,
+    "hops": 1
+  },
+  {
+    "query_type": "shortest_path",
+    "node_id": null,
+    "left_id": 48,
+    "right_id": 49,
+    "hops": 3
+  }
+]
