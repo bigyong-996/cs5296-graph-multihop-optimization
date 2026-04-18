@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graph-bench"
+version = "0.1.0"
+description = "Local-first graph benchmark toolkit for CS5296"
+requires-python = ">=3.12"
+dependencies = [
+  "neo4j>=5.20",
+  "psycopg[binary]>=3.2",
+  "gremlinpython>=3.7",
+  "pandas>=2.2",
+  "matplotlib>=3.9",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+markers = [
+  "integration: requires local containers",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

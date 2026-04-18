@@ -1,0 +1,6 @@
+{
+  "dataset_name": "facebook_tiny",
+  "directed": false,
+  "node_count": 4,
+  "edge_count": 8
+}
